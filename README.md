@@ -1,4 +1,4 @@
-# WIP: FastAPI Code Generator
+# WIP: SQL Column Parser
 
 ![Codecov](https://img.shields.io/codecov/c/gh/nymann/sql-column-parser)
 ![GitHub contributors](https://img.shields.io/github/contributors/nymann/sql-column-parser)
