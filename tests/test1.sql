@@ -11,4 +11,3 @@ CREATE TABLE users (
 );
 CREATE INDEX users_email_idx ON users USING btree (email);
 CREATE INDEX users_name_idx ON users USING btree (name);
-
