@@ -1,4 +1,6 @@
 src/sql_column_parser/version.py
+.history/
+.vscode/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
