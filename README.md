@@ -2,6 +2,7 @@
 
 ![Codecov](https://img.shields.io/codecov/c/gh/nymann/sql-column-parser)
 ![GitHub contributors](https://img.shields.io/github/contributors/nymann/sql-column-parser)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/sql-column-parser)
 
 Library used to parse SQL `CREATE TABLE` statements into Python code used for code generation.
 
@@ -24,7 +25,7 @@ CREATE INDEX users_email_idx ON users USING btree (email);
 CREATE INDEX users_name_idx ON users USING btree (name);
 ```
 
-The output would then be a list of columns of type:
+The output would then be a list of columns of type Table is available:
 ```Py
 @dataclasses.dataclass
 class Table:

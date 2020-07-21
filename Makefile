@@ -18,7 +18,7 @@ help:
 	@echo " - runs sql_column_parser"
 
 ${VERSION}:
-	@echo "__version__ = \"$(shell git describe --always)\"" > ${VERSION}
+	@echo "__version__ = \"$(shell git describe --tag)\"" > ${VERSION}
 
 hooks:${TMP_HOOKS}
 ${TMP_HOOKS}:.pre-commit-config.yaml
@@ -45,6 +45,9 @@ fix: hooks
 	@isort --recursive src tests
 	@yapf --style google -ipr src tests
 	@pylint --rcfile=setup.cfg src tests
+
+deploy: ${VERSION} install
+	@python3 setup.py sdist
 
 clean:
 	@find src tests | grep -E "(__pycache__|\.pyc)" | xargs rm -rf
