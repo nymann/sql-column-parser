@@ -206,7 +206,7 @@ class Parser:
         """
         if not line.upper().startswith("PRIMARY"):
             return
-        pattern = re.compile(r"\((\S*\,*)\)")
+        pattern = re.compile(r"\((\S+(?:\,\s*\S+)*)\)")
         match = pattern.search(line).group(1)
         match = match.replace(" ", "")
         keys = match.split(",")
